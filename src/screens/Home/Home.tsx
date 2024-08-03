@@ -8,7 +8,12 @@ import {
   Alert,
   View,
   TouchableOpacity,
-  Image
+  Image,
+  TextInput,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Platform,
+  Keyboard
 } from 'react-native';
 
 function Home() {
@@ -27,6 +32,7 @@ function Home() {
       source={{
         uri:'https://static.vecteezy.com/system/resources/thumbnails/016/746/979/small/freelancer-software-developer-programmer-coder-illustrator-vector.jpg'
       }}/>
+    
     </View>
   );
 }
@@ -70,7 +76,7 @@ const style=StyleSheet.create({
     height:300,
     width:300,
     margin:45
-  }
+  },
 })
 
 export default Home;

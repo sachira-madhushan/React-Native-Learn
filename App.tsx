@@ -11,11 +11,14 @@ import {
   Image
 } from 'react-native';
 import Home from './src/screens/Home/Home';
+import Login from './src/screens/Login/Login';
+import Details from './src/screens/Details/Details';
 function App() {
   return (
     <SafeAreaView>
-      <Home/>
-
+      {/* <Home/> */}
+      {/* <Login/> */}
+      <Details/>
     </SafeAreaView>
   );
 }
