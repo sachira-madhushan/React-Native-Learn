@@ -1,0 +1,76 @@
+import React from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  Button,
+  ToastAndroid,
+  Alert,
+  View,
+  TouchableOpacity,
+  Image
+} from 'react-native';
+
+function Home() {
+  return (
+    <View>
+      <Text style={style.text}>Sacheera</Text>
+      <Button title='click me'onPress={showToast}></Button>
+      <View style={style.view}>
+        <Button title='click me'onPress={showAlert}></Button>
+      </View>
+      <TouchableOpacity style={style.touchable}>
+        <Text style={style.text}>Click Here</Text>
+      </TouchableOpacity>
+      <Image 
+      style={style.image}
+      source={{
+        uri:'https://static.vecteezy.com/system/resources/thumbnails/016/746/979/small/freelancer-software-developer-programmer-coder-illustrator-vector.jpg'
+      }}/>
+    </View>
+  );
+}
+
+const showToast=()=>{
+  ToastAndroid.showWithGravity(
+    "Button Click",
+    ToastAndroid.LONG,
+    ToastAndroid.BOTTOM
+  );
+}
+const showAlert=()=>{
+  Alert.alert("Success","Do you agree?",[
+    {
+      text:"Ok",
+      onPress:()=>{},
+    },
+    {
+      text:"Cansel",
+      onPress:()=>{}
+    }
+  ]
+  )
+}
+const style=StyleSheet.create({
+  text:{
+    color:'white',
+    fontSize:20,
+    textAlign:'center',
+  },
+  view:{
+    margin:50
+  },
+  touchable:{
+    backgroundColor:'blue',
+    padding:10,
+    margin:50,
+    borderRadius:15,
+  },
+  image:{
+    height:300,
+    width:300,
+    margin:45
+  }
+})
+
+export default Home;
