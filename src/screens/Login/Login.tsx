@@ -19,7 +19,6 @@ import {
 function Login() {
     return (
         <View>
-
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={style.container}>
